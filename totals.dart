@@ -5,7 +5,10 @@ void main(List<String> arguments) {
  print('usage: dart totals.dart <inputFile.csv>');
  exit(1);
  }
- final inputfile = arguments.first;
- print(inputfile);
+ final inputFile = arguments.first;
+ final lines = File(inputFile).readAsLinesSync(); 
+ for (var line in lines) {
+  print(line);
+ }
 
 }
